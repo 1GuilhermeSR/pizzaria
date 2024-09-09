@@ -1,0 +1,14 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "email": "1guilhermesr1@gmail.com",
+      "senha": "senhafoda"
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ]
+}

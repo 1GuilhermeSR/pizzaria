@@ -1,0 +1,117 @@
+.main{
+    display: flex;
+    width: 100%;
+    height: 739px;
+    overflow: hidden;
+    background: rgb(0,0,0);
+    background: linear-gradient(332deg, rgb(128, 46, 46) 0%, rgba(195,70,70,1) 70%);
+}
+
+.logo{
+    display: flex;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 200px;
+    height: 165px;
+}
+
+.container{
+    width: 30em;
+    height: 25em;
+    background-color: white;
+    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) ;    
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campoEmail {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.campoSenha{
+    display: flex;
+    flex-direction: column;    
+}
+
+input{
+    width: 20em;
+    height: 2.2em;
+    border-radius: 8px;
+    border: 0.135em solid rgb(202, 202, 202);
+    margin-bottom: 1em;
+}
+
+.btnLogin{
+    width: 20.4em;
+    height: 2.7em;
+    border-radius: 8px;
+    border: 0.135em solid rgb(202, 202, 202);
+    background-color: #901919;
+    color: white;    
+}
+.btnLogin:hover{
+    background-color: #771515;
+    cursor: pointer;
+}
+
+.btnGoogle{
+    width: 20.4em;
+    height: 2.7em;
+    border-radius: 8px;
+    border: 0.135em solid rgb(202, 202, 202);
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);   
+    margin-top: 1em;
+}
+.btnGoogle:hover{
+    background-color: #f3f3f3;
+    cursor: pointer;
+}
+
+#googleIcon{
+    font-size: 28px;
+    margin-right: 8px;
+    border-right: 0.06em solid #f0f0f0;
+    padding-right: 5px;
+    opacity: 0.9;
+}
+#googleBtn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#txtLoginGoogle{
+    opacity: 0.8;
+}
+
+#cadastro{
+    width: 16.8em;
+    margin-top: 0.2em;
+}
+
+#txtCadastro{
+    color: rgb(91, 91, 255);
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+#txtCadastro:hover{
+    color: rgb(76, 76, 255);
+    opacity: 1;
+    cursor: pointer;
+}
+
