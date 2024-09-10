@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import UserService from '../UserService';
 import { useNavigate } from 'react-router-dom';
+import Cadastro from './Cadastro';
 function Login(){
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
@@ -27,6 +28,10 @@ function Login(){
     function fazerLogin(){
         userService.definirUsuario(usuario);
         navigate('/inicio')
+    }
+
+    function criarCadastro(){
+        navigate('/cadastro')
     }
 
     return(
@@ -59,7 +64,7 @@ function Login(){
                     </button>
                     
                     <div id={styles.cadastro}>
-                        <span id={styles.txtCadastro}>Criar conta?</span>
+                        <span id={styles.txtCadastro} onClick={criarCadastro}>Criar conta</span>
                     </div>
 
                     
