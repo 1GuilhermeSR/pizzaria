@@ -1,12 +1,12 @@
 import NavegationBar from "./layout/NavegationBar";
 import styles from './styles/inicio.module.css'
 
-function Inicio(){
+function Produto(){
     return(
         <>
             <NavegationBar />            
             <div className={styles.main}>            
-               <h1>INICIO</h1>
+               <h1>Produto</h1>
                
             </div>
         </>
@@ -15,4 +15,4 @@ function Inicio(){
     )
 }
 
-export default Inicio;
+export default Produto;
