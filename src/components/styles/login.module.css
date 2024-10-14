@@ -6,7 +6,9 @@
     background: rgb(0,0,0);
     background: linear-gradient(332deg, rgb(128, 46, 46) 0%, rgba(195,70,70,1) 70%);
 }
-
+h1{
+    margin-top:8px !important;
+}
 .logo{
     display: flex;
     width: 300px;
@@ -56,8 +58,8 @@ input{
 }
 
 .btnLogin{
-    width: 20.95em;
-    height: 2.7em;
+    width: 21.61em !important;
+    height: 2.6em;
     border-radius: 8px;
     border: 0.135em solid rgb(202, 202, 202);
     background-color: #901919;
@@ -69,8 +71,8 @@ input{
 }
 
 .btnGoogle{
-    width: 20.9em;
-    height: 2.7em;
+    width: 21.61em !important;
+    height: 2.6em;
     border-radius: 8px;
     border: 0.135em solid rgb(202, 202, 202);
     background-color: #ffffff;

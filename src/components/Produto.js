@@ -6,8 +6,7 @@ function Produto(){
         <>
             <NavegationBar />            
             <div className={styles.main}>            
-               <h1>Produto</h1>
-               
+               <h1>Produto</h1>               
             </div>
         </>
 

@@ -25,24 +25,31 @@
 .botoes{
     display: flex;
     width:52%;
+    margin-bottom: 8px;
 }
 
-button{
-    width: 90.4em;
-    height: 2.7em;
-    margin-right: 1.3em;
+.btn{
+    width: 90.4em !important;
+    height: 2.3em;
+    margin-right: 0.5em !important;
     margin-bottom: 0.59em;
     border-radius: 16px;
     border-style: none;
     color: white;
     background-color: #0E4910;
-    font-size: 1em;
+    font-size:1.2em !important;
 }
 
-button:hover{
-    background-color: #156417;
+.btn:hover{
+    cursor: pointer;
+    background-color: #135716;
+    transform: translateY(-1px);
 }
+
+/* .ativo{
+    background-color: rgb(190, 0, 248) !important;
+} */
 
 .ativo{
-    background-color: rgb(190, 0, 248) !important;
+    background: linear-gradient(to right, #156417, #018a06);
 }

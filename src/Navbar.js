@@ -3,6 +3,10 @@ import ProtectedPages from './ProtectedPages';
 import Login from './components/Login';
 import Inicio from './components/Inicio';
 import Produto from './components/Produto';
+import Categorias from './components/Categorias';
+import Cupons from './components/Cupons';
+import Configuracao from './components/Configuracao';
+
 function Navbar(){
     return(
         <Router>
@@ -18,7 +22,9 @@ function Navbar(){
                         <Produto/>
                     </ProtectedPages>
                 }/>
-                <Route path="/produto" element={<Produto/>}/>
+                <Route path="/categoria" element={<ProtectedPages><Categorias/></ProtectedPages>}/>
+                <Route path="/cupom" element={<ProtectedPages><Cupons/></ProtectedPages>}/>
+                <Route path="/configuracao" element={<ProtectedPages><Configuracao/></ProtectedPages>}/>
             </Routes>
         </Router>
     )

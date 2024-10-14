@@ -1,18 +1,15 @@
 import NavegationBar from "./layout/NavegationBar";
 import styles from './styles/inicio.module.css'
 
-function Inicio(){
+function Cupons(){
     return(
         <>
             <NavegationBar />            
             <div className={styles.main}>            
-               <h1>Inicio</h1>
-               
+               <h1>Cupons</h1>               
             </div>
         </>
-
-
     )
 }
 
-export default Inicio;
+export default Cupons;
