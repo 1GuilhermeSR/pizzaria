@@ -1,0 +1,146 @@
+.main{
+    width: calc(100% - 24px);
+    padding-left: 12px;
+    padding-right: 12px;
+}
+li{
+    list-style: none;
+    width: 100% !important;
+    break-inside: avoid;
+}
+ul{
+    width: 100%;
+    column-count: 2;
+    padding-left: 0px !important ;
+}
+#linha1{
+    display: flex;
+}
+#linha2{
+    
+}
+#linha3{
+    
+}
+.pedidoLabel{
+    /* margin-left: 12px; */
+}
+.pedidoPendente{
+    width: 96%;    
+    height: fit-content;
+    margin-bottom: 15px;
+    /* margin-left: 12px; */
+    border-radius: 12px;
+    border: solid;
+    border-width: 1px;
+    border-color: rgb(224, 224, 224);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.titulo{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.containerPedido{
+    display: flex;
+    flex-direction: column;
+}
+.containerProdutos{
+    display: flex;
+    align-items: center;
+}
+.containerEndereroEpagamento{
+    display: flex;
+    margin-bottom: 6px;
+}
+.containerObservacaoEtotal{
+    display: flex;
+    justify-content: space-between;
+}
+.containerPagamento{
+    margin-left: 10px;
+}
+/* .containerTotal{
+    margin-right: 40px;
+} */
+.produtoLabel{
+    margin-top: 6px;   
+    margin-bottom: 6px;   
+}
+.produto{
+    margin-left: 5px;
+    /* margin-right: 8px; */
+}
+.endereco{
+    margin-top: 0px;
+    margin-bottom: 0px;   
+}
+.pagamento{
+    margin-top: 0px;
+    margin-bottom: 0px;   
+}
+.observacao{
+    margin-top: 0px;
+    margin-bottom: 0px;   
+}
+.total{
+    margin-top: 0px;
+    margin-bottom: 0px;   
+}
+.containerHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.idSpan{
+    font-weight: bold;
+    font-size: 1.4em;
+}
+.totalSpan{
+    font-weight: bold;
+    font-size: 1.4em;
+
+}
+.containerTotal{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.totalLabel{       
+    color: #858585b4;
+}
+.pedidoHeader{
+
+}
+.pedidoBody{
+display: flex;
+flex-direction: column;
+}
+.pedidoFooter{
+
+}
+
+.containerProduto{
+    display: flex;
+    align-items: center;
+}
+.produtoNome{
+    margin-bottom: 4px;
+    margin-left: 3px;
+}
+
+.containerBebidaStatus{
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerBebida{
+    display: flex;
+    align-items: center;
+}
+.bebidaNome{
+    margin-bottom: 4px;
+    margin-left: 3px;
+}
