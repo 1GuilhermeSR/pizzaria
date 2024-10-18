@@ -3,7 +3,11 @@ import logo from '../img/Logo.png'
 import { useLocation, useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import { useState, useEffect} from 'react';
-
+import { FaHouse, FaBoxArchive,  } from "react-icons/fa6";
+import { BiCategory, BiSolidCategory, BiBox, BiSolidBox, BiCog, BiSolidCog  } from "react-icons/bi";
+import { BsTicketPerforated, BsTicketPerforatedFill} from "react-icons/bs";
+import { LiaCogSolid } from "react-icons/lia";
+import { PiHouseLineBold,PiHouseLineFill  } from "react-icons/pi";
 
 function NavegationBar(){
     const navigate = useNavigate()
@@ -45,11 +49,11 @@ function NavegationBar(){
 
             <div className={styles.content}>
                 <div className={styles.botoes}>
-                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'inicio' })} onClick={irInicio}>Inicio</button>
-                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'produto' })} onClick={irProduto}>Produtos</button>
-                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'categoria' })} onClick={irCategoria}>Categorias</button>
-                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'cupom' })} onClick={irCupom}>Cupons</button>
-                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'configuracao' })} onClick={irConfiguracao}>Configurações</button>
+                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'inicio' })} onClick={irInicio}>{atual === 'inicio' ? <PiHouseLineFill /> : <PiHouseLineBold />}Inicio</button>
+                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'produto' })} onClick={irProduto}>{atual == 'produto' ? <BiSolidBox/> : <BiBox/>} Produtos</button>
+                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'categoria' })} onClick={irCategoria}>{atual == 'categoria' ? <BiSolidCategory/> : <BiCategory/>} Categorias</button>
+                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'cupom' })} onClick={irCupom}>{atual == 'cupom' ? <BsTicketPerforatedFill/> : <BsTicketPerforated/>} Cupons</button>
+                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'configuracao' })} onClick={irConfiguracao}>{atual == 'configuracao' ? <BiSolidCog/> : <BiCog/>}Configurações</button>
                 </div>
                 
             </div>

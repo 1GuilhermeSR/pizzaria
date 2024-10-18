@@ -2,7 +2,21 @@
     width: calc(100% - 24px);
     padding-left: 12px;
     padding-right: 12px;
+    max-height: 67vh;
+    overflow-y: auto;
 }
+.main::-webkit-scrollbar {
+    width: 5px !important;
+}
+.main::-webkit-scrollbar-track {
+  background: #f1f1f1 !important; /* Cor do fundo da barra */
+}
+.main::-webkit-scrollbar-thumb {
+    background: #c0c0c0; /* Cor do polegar */
+    border-radius: 10px; /* Arredondando o polegar para deixar mais fino */
+  }
+
+
 li{
     list-style: none;
     width: 100% !important;
@@ -12,6 +26,7 @@ ul{
     width: 100%;
     column-count: 2;
     padding-left: 0px !important ;
+    margin-bottom: 8px;
 }
 #linha1{
     display: flex;
@@ -24,6 +39,8 @@ ul{
 }
 .pedidoLabel{
     /* margin-left: 12px; */
+    margin-bottom: 2px;
+    margin-top: 0px;
 }
 .pedidoPendente{
     width: 96%;    
@@ -60,9 +77,9 @@ ul{
     display: flex;
     justify-content: space-between;
 }
-.containerPagamento{
+/* .containerPagamento{
     margin-left: 10px;
-}
+} */
 /* .containerTotal{
     margin-right: 40px;
 } */
@@ -96,7 +113,7 @@ ul{
 }
 .idSpan{
     font-weight: bold;
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 .totalSpan{
     font-weight: bold;
@@ -125,15 +142,18 @@ flex-direction: column;
 .containerProduto{
     display: flex;
     align-items: center;
+    margin-bottom: 3px;
 }
 .produtoNome{
     margin-bottom: 4px;
     margin-left: 3px;
+    color: #858585f5;
 }
 
 .containerBebidaStatus{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 3px;
 }
 
 .containerBebida{
@@ -143,4 +163,58 @@ flex-direction: column;
 .bebidaNome{
     margin-bottom: 4px;
     margin-left: 3px;
+    color: #858585f5;
+}
+.ContainerStatus{
+    display: flex;
+    align-items: center;
+}
+.statusLabel{
+    margin-bottom: 4px;
+    color: #858585b4;
+}
+.containerPagamento{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.pagamentoNome{
+    margin-bottom: 4px;
+    color: #858585f5;
+}
+.containerEndereco{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+.enderecoNome{
+    margin-bottom: 4px;
+    color: #858585f5;
+}
+.containerObservacao{
+border: 1px solid #dadada;
+height: 50px;
+max-height: 100px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 6px;
+}
+.observacaoNome{
+    color: #858585f5;
+    margin-left: 4px;
+}
+
+/* icones */
+.produtoIcon{
+    color: #186f18a1;
+}
+.bebidaIcon{
+    color: #186f18a1;
+}
+.enderecoIcon{
+    color: #186f18a1;
+}
+.pagamentoIcon{
+    color: #186f18a1;
 }

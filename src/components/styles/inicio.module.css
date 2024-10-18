@@ -33,7 +33,7 @@ p{
 .containerPedidos{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(0, 0, 0, 0.1), 4px 0 8px rgba(0, 0, 0, 0.1), -4px 0 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    height: 75vh;   
+    height: 80vh;   
 }
 #containerHeader{
     width: 99%;
@@ -62,7 +62,7 @@ p{
         width: 100%;        
 }
 .titulo{
-    margin-top: 28px !important;
+    margin-top: 8px !important;
     margin-bottom: 0px;
 }
 .topo p{
@@ -130,6 +130,7 @@ p{
 #divisor{
     width: 98%;
     margin-top: 20px;
+    margin-bottom: 14px;
     margin-left: auto;
     margin-right: auto;
     border-bottom: solid;

@@ -15,12 +15,14 @@ function Inicio() {
                 {
                     nome: "Pizza marguerita",
                     tamanho: "Pequena (4 fatias)",
-                    preco: 54.99
+                    preco: 54.99,
+                    tipo: 1
                 },
                 {
                     nome: "Pizza calabresa",
                     tamanho: "Média (6 fatias)",
-                    preco: 65.99
+                    preco: 65.99,
+                    tipo: 1
                 }
             ],
             enderecoEntrega: {
@@ -55,7 +57,7 @@ function Inicio() {
             },
             formaPagamento: "Cartão com final 1234",
             total: 75.50,
-            status: 0, // A caminho
+            status: 2, // A caminho
             observacao: "Sem borda recheada."
         },
         {
@@ -124,12 +126,14 @@ function Inicio() {
                 {
                     nome: "Pizza portuguesa",
                     tamanho: "Grande (8 fatias)",
-                    preco: 70.00
+                    preco: 70.00,
+                    tipo: 1
                 },
                 {
                     nome: "Guaraná",
                     tamanho: "1,5 Litros",
-                    preco: 9.50
+                    preco: 9.50,
+                    tipo: 2
                 }
             ],
             enderecoEntrega: {
@@ -143,6 +147,153 @@ function Inicio() {
             total: 79.50,
             status: 1, // Em produção
             observacao: "Com azeitona."
+        },
+        // Novos objetos anteriores
+        {
+            numeroPedido: 144,
+            dataPedido: "05/09/2024 14:20",
+            produtos: [
+                {
+                    nome: "Pizza vegetariana",
+                    tamanho: "Média (6 fatias)",
+                    preco: 60.00,
+                    tipo: 1
+                },
+                {
+                    nome: "Água mineral",
+                    tamanho: "500ml",
+                    preco: 3.50,
+                    tipo: 2
+                }
+            ],
+            enderecoEntrega: {
+                rua: "Alameda das Flores, 789",
+                bairro: "Jardim Alegre",
+                cidade: "Cidade da Alegria",
+                estado: "SP",
+                cep: "12340-987"
+            },
+            formaPagamento: "Cartão com final 4321",
+            total: 63.50,
+            status: 1, // Em produção
+            observacao: "Pouca salada na pizza, por favor."
+        },
+        {
+            numeroPedido: 145,
+            dataPedido: "06/09/2024 11:45",
+            produtos: [
+                {
+                    nome: "Pizza de chocolate",
+                    tamanho: "Pequena (4 fatias)",
+                    preco: 45.00,
+                    tipo: 1
+                },
+                {
+                    nome: "Suco de uva",
+                    tamanho: "1 Litro",
+                    preco: 7.00,
+                    tipo: 2
+                }
+            ],
+            enderecoEntrega: {
+                rua: "Rua dos Doces, 321",
+                bairro: "Bairro Açucarado",
+                cidade: "Cidade dos Sabores",
+                estado: "RJ",
+                cep: "98765-321"
+            },
+            formaPagamento: "Dinheiro (troco para R$50)",
+            total: 52.00,
+            status: 0, // Pedido feito
+            observacao: "Troco para R$50."
+        },
+        // Novos objetos adicionados agora
+        {
+            numeroPedido: 146,
+            dataPedido: "07/09/2024 13:15",
+            produtos: [
+                {
+                    nome: "Pizza bacon",
+                    tamanho: "Grande (8 fatias)",
+                    preco: 72.00,
+                    tipo: 1
+                },
+                {
+                    nome: "Refrigerante Sprite",
+                    tamanho: "1,5 Litros",
+                    preco: 9.00,
+                    tipo: 2
+                }
+            ],
+            enderecoEntrega: {
+                rua: "Avenida Central, 345",
+                bairro: "Bairro Novo",
+                cidade: "Cidade do Sol",
+                estado: "PE",
+                cep: "54321-987"
+            },
+            formaPagamento: "Cartão com final 9876",
+            total: 81.00,
+            status: 1, // Em produção
+            observacao: "Com bacon extra."
+        },
+        {
+            numeroPedido: 147,
+            dataPedido: "08/09/2024 17:30",
+            produtos: [
+                {
+                    nome: "Pizza napolitana",
+                    tamanho: "Média (6 fatias)",
+                    preco: 62.00,
+                    tipo: 1
+                },
+                {
+                    nome: "Chá gelado",
+                    tamanho: "1 Litro",
+                    preco: 6.50,
+                    tipo: 2
+                }
+            ],
+            enderecoEntrega: {
+                rua: "Rua das Palmeiras, 123",
+                bairro: "Vila Verde",
+                cidade: "Cidade das Árvores",
+                estado: "SC",
+                cep: "12345-987"
+            },
+            formaPagamento: "Pix",
+            total: 68.50,
+            status: 0, // Pedido feito
+            observacao: ""
+        },
+        {
+            numeroPedido: 148,
+            dataPedido: "09/09/2024 18:00",
+            produtos: [
+                {
+                    nome: "Pizza de presunto",
+                    tamanho: "Grande (8 fatias)",
+                    preco: 68.00,
+                    tipo: 1
+                },
+                {
+                    nome: "Cerveja",
+                    tamanho: "600ml",
+                    preco: 12.00,
+                    tipo: 2
+                }
+            ],
+            enderecoEntrega: {
+                rua: "Rua dos Pescadores, 456",
+                bairro: "Bairro Marítimo",
+                cidade: "Cidade da Costa",
+                estado: "AL",
+                cep: "87654-432"
+            },
+            formaPagamento: "Cartão com final 6543",
+            total: 80.00,
+            status: 2, // A caminho
+            observacao: "Cerveja bem gelada."
         }
     ];
     const [dataIni, setDataIni] = useState(null);
@@ -159,9 +310,7 @@ function Inicio() {
                         <p> Visualize os pedidos dos clientes</p>
                     </div>
                     <div className={styles.containerPedidos}>
-                        <div id={styles.containerHeader}>
-                            <PiNote/><p id={styles.headerLabel}> Pedidos</p>
-                        </div>
+
                         <div id={styles.filtros}>
                             <div id={styles.filtroLabel}><p>Filtros: </p></div>
                             <div id={styles.inputFiltros}>
