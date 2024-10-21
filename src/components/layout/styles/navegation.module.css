@@ -4,7 +4,7 @@
     background-color: #0E4910;    
 }
 .logo{
-    width: 7em;
+    width: 20%;
     height: 6em;
     position: absolute;
 }
@@ -18,8 +18,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 100%;
+    width: 80%;
     height: 6em;
+    margin-left: auto;
 }
 
 .botoes{

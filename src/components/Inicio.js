@@ -298,7 +298,11 @@ function Inicio() {
     ];
     const [dataIni, setDataIni] = useState(null);
     const [dataFin, setDataFin] = useState(null);
+    const [status, setStatus] = useState("todos");
 
+    const handleStatusChange = (event) => {        
+        setStatus(event.target.value);
+    };
 
     return (
         <>
@@ -354,6 +358,8 @@ function Inicio() {
                                             id="todos"
                                             name="status"
                                             value="todos"
+                                            checked={status == 'todos'}
+                                            onChange={handleStatusChange} 
                                             className={styles.chkStatus}
                                         />
                                         <label htmlFor="todos" className={styles.chkLabel}>Todos</label>
@@ -362,7 +368,9 @@ function Inicio() {
                                             type="radio"
                                             id="pendentes"
                                             name="status"
-                                            value="pendentes"
+                                            value="pendentes" 
+                                            checked={status == 'pendentes'}
+                                            onChange={handleStatusChange}                                            
                                             className={styles.chkStatus}
                                         />
                                         <label htmlFor="pendentes" className={styles.chkLabel}>Pendentes</label>
@@ -372,6 +380,8 @@ function Inicio() {
                                             id="em-producao"
                                             name="status"
                                             value="em-producao"
+                                            checked={status == 'em-producao'}
+                                            onChange={handleStatusChange} 
                                             className={styles.chkStatus}
                                         />
                                         <label htmlFor="em-producao" className={styles.chkLabel}>Em Produção</label>
@@ -381,6 +391,8 @@ function Inicio() {
                                             id="saiu-para-entrega"
                                             name="status"
                                             value="saiu-para-entrega"
+                                            checked={status == 'saiu-para-entrega'}
+                                            onChange={handleStatusChange} 
                                             className={styles.chkStatus}
                                         />
                                         <label htmlFor="saiu-para-entrega" className={styles.chkLabel}>Saiu para Entrega</label>
@@ -389,7 +401,7 @@ function Inicio() {
                             </div>
                         </div>
                         <div id={styles.divisor}></div>                                                    
-                        <Pedidos listaPedidos={pedidos}></Pedidos>
+                        <Pedidos listaPedidos={pedidos}  status={status}></Pedidos>
                     </div>
 
 

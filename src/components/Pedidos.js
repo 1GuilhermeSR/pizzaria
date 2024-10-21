@@ -8,7 +8,7 @@ import { BiSolidDrink } from "react-icons/bi";
 import { TfiMoney } from "react-icons/tfi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { TbBrandCashapp } from "react-icons/tb";
-function Pedidos({ listaPedidos }) {
+function Pedidos({ listaPedidos, status, dataIni, dataFin }) {
 
     const pedidosPendentes = listaPedidos.filter(p => p.status == 0);
     const pedidosProducao = listaPedidos.filter(p => p.status == 1);
@@ -45,7 +45,7 @@ function Pedidos({ listaPedidos }) {
     return (
         <div className={styles.main}>
             {
-                pedidosPendentes.length > 0 ? (<><h2 className={styles.pedidoLabel}>Pedidos Pendentes</h2><div id={styles.linha1}><ul>{pedidosPendentes.map((pedido) => (
+                pedidosPendentes.length > 0 && (status == 'pendentes' || status == 'todos') ? (<><h2 className={styles.pedidoLabel}>Pedidos Pendentes</h2><div id={styles.linha1}><ul>{pedidosPendentes.map((pedido) => (
                     <li>
                         <div className={styles.pedidoPendente}>
                             <div className={styles.pedidoHeader}>
@@ -67,7 +67,7 @@ function Pedidos({ listaPedidos }) {
                 ))}</ul></div></>) : null
             }
             {
-                pedidosProducao.length > 0 ?(<><h2 className={styles.pedidoLabel}>Pedidos em Produção</h2><div id={styles.linha1}><ul>{pedidosProducao.map((pedido) => (
+                pedidosProducao.length > 0 && (status == 'em-producao' || status == 'todos')?(<><h2 className={styles.pedidoLabel}>Pedidos em Produção</h2><div id={styles.linha1}><ul>{pedidosProducao.map((pedido) => (
                     <li>
                         <div className={styles.pedidoPendente}>
                             <div className={styles.pedidoHeader}>
@@ -89,7 +89,7 @@ function Pedidos({ listaPedidos }) {
                 ))}</ul></div></>) : null
             }
             {
-                pedidosEntrega.length > 0 ?  (<><h2 className={styles.pedidoLabel}>Pedidos Para Entregar</h2><div id={styles.linha1}><ul>{pedidosEntrega.map((pedido) => (
+                pedidosEntrega.length > 0 && (status == 'saiu-para-entrega' || status == 'todos') ?  (<><h2 className={styles.pedidoLabel}>Pedidos Para Entregar</h2><div id={styles.linha1}><ul>{pedidosEntrega.map((pedido) => (
                     <li>
                         <div className={styles.pedidoPendente}>
                             <div className={styles.pedidoHeader}>
