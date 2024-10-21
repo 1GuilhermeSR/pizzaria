@@ -1,0 +1,139 @@
+body{
+    background: rgb(255, 255, 255);
+
+}
+p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.uiInput{
+    margin-bottom: 0px !important;
+    margin-top: 2px;
+    height: 1.3em;
+    width: 7em !important;
+    text-align: center;
+    border-radius: 4px;
+    border: solid 1px rgba(34, 36, 38, 0.15) ;
+
+    
+}
+.main{
+    width: 100%;
+    height: calc(100vh - 128px);
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+.containerPedidos{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(0, 0, 0, 0.1), 4px 0 8px rgba(0, 0, 0, 0.1), -4px 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 80vh;   
+}
+#containerHeader{
+    width: 99%;
+    height: 1.8em !important;
+    display: flex;
+    align-items: center;
+    background-color: hsl(0, 0%, 98%);;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #dadada;
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+#containerHeader svg{
+    font-size: 1.4em;
+
+    color: hsl(116.83deg 53.55% 27.27%);
+}
+#headerLabel{
+    margin-left: 10px;
+    color: hsl(116.83deg 53.55% 27.27%);
+    font-weight: 700;
+}
+.topo{
+        width: 100%;        
+}
+.titulo{
+    margin-top: 8px !important;
+    margin-bottom: 0px;
+}
+.topo p{
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.6);
+}
+#filtros{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+    padding-left: 12px;
+}
+#filtroLabel p{
+    font-weight: 600;
+}
+#datas{
+    display: flex;
+    width: 33%;
+}
+.dataFinLabel{
+    margin-right: 8px;
+}
+.dataIniLabel{
+    margin-right: 8px;
+}
+#dataIni{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+#dataFin{
+    display: flex;
+    align-items: center;
+}
+#inputFiltros{
+    display: flex;
+}
+.status{
+    display: flex;
+ width: 50%;
+ align-items: center;
+}
+.radioGroup {
+    display: flex;
+    gap: 1px; /* Espaçamento entre os itens */
+    align-items: center;
+    margin-top: 1px;
+    margin-left: 4px;
+  }
+
+  .radioGroup label {
+    margin-right: 10px; /* Espaço entre o círculo do rádio e o texto */
+  }
+
+.chkStatus{
+
+}
+.chkLabel{
+
+}
+#statusLabel{
+    margin-right: 8px;
+}
+#divisor{
+    width: 98%;
+    margin-top: 20px;
+    margin-bottom: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #dadada;
+}

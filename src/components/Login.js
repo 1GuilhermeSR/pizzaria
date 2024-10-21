@@ -5,7 +5,11 @@ import axios from 'axios';
 import { useState } from 'react';
 import UserService from '../UserService';
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 import Cadastro from './Cadastro';
+=======
+
+>>>>>>> b510e47232b0b9b32b05b90148bd0c54218ed0ba
 function Login(){
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")

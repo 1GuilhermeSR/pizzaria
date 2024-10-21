@@ -2,7 +2,10 @@ import {BrowserRouter as Router,Routes, Route} from 'react-router-dom'
 import ProtectedPages from './ProtectedPages';
 import Login from './components/Login';
 import Inicio from './components/Inicio';
-import Cadastro from './components/Cadastro';
+import Produto from './components/Produto';
+import Categorias from './components/Categorias';
+import Cupons from './components/Cupons';
+import Configuracao from './components/Configuracao';
 
 function Navbar(){
     return(
@@ -14,7 +17,14 @@ function Navbar(){
                         <Inicio/>
                     </ProtectedPages>
                 }/>
-                <Route path="/cadastro" element={<Cadastro/>}/>
+                <Route path="/produto" element={
+                    <ProtectedPages>
+                        <Produto/>
+                    </ProtectedPages>
+                }/>
+                <Route path="/categoria" element={<ProtectedPages><Categorias/></ProtectedPages>}/>
+                <Route path="/cupom" element={<ProtectedPages><Cupons/></ProtectedPages>}/>
+                <Route path="/configuracao" element={<ProtectedPages><Configuracao/></ProtectedPages>}/>
             </Routes>
         </Router>
     )
