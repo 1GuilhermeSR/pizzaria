@@ -9,13 +9,12 @@ p{
 .uiInput{
     margin-bottom: 0px !important;
     margin-top: 2px;
-    height: 1.3em;
-    width: 7em !important;
+    height: 1.3rem;
+    width: 6.5rem !important;
     text-align: center;
     border-radius: 4px;
-    border: solid 1px rgba(34, 36, 38, 0.15) ;
-
-    
+    border: solid 1px rgba(34, 36, 38, 0.15) ;    
+    font-family: 'system-ui';
 }
 .main{
     width: 100%;
@@ -81,7 +80,7 @@ p{
 }
 #datas{
     display: flex;
-    width: 33%;
+    width: 37%;
 }
 .dataFinLabel{
     margin-right: 8px;
@@ -112,14 +111,15 @@ p{
     align-items: center;
     margin-top: 1px;
     margin-left: 4px;
+    width: 75%;
   }
 
   .radioGroup label {
     margin-right: 10px; /* Espaço entre o círculo do rádio e o texto */
   }
 
-.chkStatus{
-
+.chkStatus:hover{
+    cursor: pointer;
 }
 .chkLabel{
 
@@ -137,3 +137,16 @@ p{
     border-width: 1px;
     border-color: #dadada;
 }
+#btnFiltrar{
+    margin-left: 20px !important;
+    width: 4.8rem;
+    border: solid 1px #cecece;
+    border-radius: 4px;
+}
+#btnFiltrar:hover{
+    cursor: pointer;
+    background-color: #cccccc;
+}
+
+  
+ 

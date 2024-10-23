@@ -5,7 +5,8 @@ import React from 'react'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useState } from 'react';
-import { PiNote } from "react-icons/pi";
+import { format } from 'date-fns';
+import moment from 'moment';
 function Inicio() {
     const pedidos = [
         {
@@ -296,13 +297,27 @@ function Inicio() {
             observacao: "Cerveja bem gelada."
         }
     ];
-    const [dataIni, setDataIni] = useState(null);
-    const [dataFin, setDataFin] = useState(null);
+    const [dataIni, setDataIni] = useState('');
+    const [dataFin, setDataFin] = useState('');
     const [status, setStatus] = useState("todos");
 
-    const handleStatusChange = (event) => {        
+    const handleStatusChange = (event) => {
         setStatus(event.target.value);
     };
+    const formatarDataIni = () => {
+        const date = moment(dataIni, 'YYYY-MM-DD', true);
+        console.log('Data formatada:', date);
+        if (date.isValid()) {            
+            const formatted = date.format('DD-MM-YYYY');
+            setDataIni(formatted);
+            console.log('Data formatada:', formatted);
+          } else {
+            console.log('Data inválida: ' + date);
+          }
+    } 
+    const formatarDataFin = () => {
+        const date = moment(dataIni, 'DD/MM/YYYY', true);
+    } 
 
     return (
         <>
@@ -321,34 +336,33 @@ function Inicio() {
                                 <div id={styles.datas}>
                                     <div id={styles.dataIni}>
                                         <p className={styles.dataIniLabel}>Data Inicial:</p>
-                                        <DatePicker
-                                            selected={dataIni}
-                                            onChange={(date) => setDataIni(date)}
-                                            dateFormat="dd/MM/yyyy"
-                                            customInput={
-                                                <input
-                                                    placeholder="Select a date"
-                                                    className={styles.uiInput}
-                                                    style={{ width: '100%' }}
-                                                />
-                                            }
+                                        <input
+                                            type="text"
+                                            className={styles.uiInput}
+                                            onChange={(e) => setDataIni(e.target.value)}
+                                            placeholder="" // Remove o placeholder                                                                                   
+                                            onFocus={(e) => e.target.type = 'date'}  // Muda para 'date' ao focar
+                                            onBlur={(e) => {
+                                                if (!e.target.value) e.target.type = 'text'; // Volta para 'text' se o campo estiver vazio
+                                                formatarDataIni()
+                                            }}
                                         />
                                     </div>
                                     <div id={styles.dataFin}>
                                         <p className={styles.dataFinLabel}>Data Final:</p>
-                                        <DatePicker
-                                            selected={dataFin}
-                                            onChange={(date) => setDataFin(date)}
-                                            dateFormat="dd/MM/yyyy"
-                                            customInput={
-                                                <input
-                                                    placeholder="Select a date"
-                                                    className={styles.uiInput}
-                                                    style={{ width: '100%' }}
-                                                />
-                                            }
+                                        <input
+                                            type="text"
+                                            className={styles.uiInput}
+                                            onChange={(e) => setDataFin(e.target.value)}
+                                            placeholder="" // Remove o placeholder                                                                                   
+                                            onFocus={(e) => e.target.type = 'date'}  // Muda para 'date' ao focar
+                                            onBlur={(e) => {
+                                                if (!e.target.value) e.target.type = 'text'; // Volta para 'text' se o campo estiver vazio
+                                                formatarDataFin()
+                                            }}
                                         />
                                     </div>
+                                    <button id={styles.btnFiltrar}>Filtrar</button>
                                 </div>
                                 <div className={styles.status}>
                                     <p id={styles}>Status do pedido: </p>
@@ -359,7 +373,7 @@ function Inicio() {
                                             name="status"
                                             value="todos"
                                             checked={status == 'todos'}
-                                            onChange={handleStatusChange} 
+                                            onChange={handleStatusChange}
                                             className={styles.chkStatus}
                                         />
                                         <label htmlFor="todos" className={styles.chkLabel}>Todos</label>
@@ -368,9 +382,9 @@ function Inicio() {
                                             type="radio"
                                             id="pendentes"
                                             name="status"
-                                            value="pendentes" 
+                                            value="pendentes"
                                             checked={status == 'pendentes'}
-                                            onChange={handleStatusChange}                                            
+                                            onChange={handleStatusChange}
                                             className={styles.chkStatus}
                                         />
                                         <label htmlFor="pendentes" className={styles.chkLabel}>Pendentes</label>
@@ -381,7 +395,7 @@ function Inicio() {
                                             name="status"
                                             value="em-producao"
                                             checked={status == 'em-producao'}
-                                            onChange={handleStatusChange} 
+                                            onChange={handleStatusChange}
                                             className={styles.chkStatus}
                                         />
                                         <label htmlFor="em-producao" className={styles.chkLabel}>Em Produção</label>
@@ -392,7 +406,7 @@ function Inicio() {
                                             name="status"
                                             value="saiu-para-entrega"
                                             checked={status == 'saiu-para-entrega'}
-                                            onChange={handleStatusChange} 
+                                            onChange={handleStatusChange}
                                             className={styles.chkStatus}
                                         />
                                         <label htmlFor="saiu-para-entrega" className={styles.chkLabel}>Saiu para Entrega</label>
@@ -400,8 +414,8 @@ function Inicio() {
                                 </div>
                             </div>
                         </div>
-                        <div id={styles.divisor}></div>                                                    
-                        <Pedidos listaPedidos={pedidos}  status={status}></Pedidos>
+                        <div id={styles.divisor}></div>
+                        <Pedidos listaPedidos={pedidos} status={status} dataIni={dataIni} dataFin={dataFin}></Pedidos>
                     </div>
 
 

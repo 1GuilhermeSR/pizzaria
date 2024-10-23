@@ -1,11 +1,9 @@
 import styles from './styles/pedidos.module.css';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IoPizza } from "react-icons/io5";
 import { GoDotFill } from "react-icons/go";
 import { BiSolidDrink } from "react-icons/bi";
-import { TfiMoney } from "react-icons/tfi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { TbBrandCashapp } from "react-icons/tb";
 function Pedidos({ listaPedidos, status, dataIni, dataFin }) {
@@ -13,6 +11,16 @@ function Pedidos({ listaPedidos, status, dataIni, dataFin }) {
     const pedidosPendentes = listaPedidos.filter(p => p.status == 0);
     const pedidosProducao = listaPedidos.filter(p => p.status == 1);
     const pedidosEntrega = listaPedidos.filter(p => p.status == 2);
+
+    useEffect(() => {
+        // if(dataIni != ''){
+        //     console.log(dataIni)
+        // }  
+        // if(dataFin != ''){
+        //     console.log('data final: ' + dataFin)
+        // }    
+
+    }, [dataIni, dataFin]);
 
     function retornarStatus(Status){
         if(Status == 0){
