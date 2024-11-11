@@ -6,6 +6,7 @@ p{
     margin-top: 0px;
     margin-bottom: 0px;
 }
+
 .uiInput{
     margin-bottom: 0px !important;
     margin-top: 2px;
@@ -81,6 +82,7 @@ p{
 #datas{
     display: flex;
     width: 37%;
+    align-items: center;
 }
 .dataFinLabel{
     margin-right: 8px;
@@ -102,8 +104,9 @@ p{
 }
 .status{
     display: flex;
- width: 50%;
+ width: 60%;
  align-items: center;
+ margin-left: 20px;
 }
 .radioGroup {
     display: flex;
@@ -117,6 +120,12 @@ p{
   .radioGroup label {
     margin-right: 10px; /* Espaço entre o círculo do rádio e o texto */
   }
+
+.chkStatus{
+    height: 1.2em;
+    width: 1.2em;
+    margin-bottom: 0px;
+}
 
 .chkStatus:hover{
     cursor: pointer;
@@ -140,6 +149,7 @@ p{
 #btnFiltrar{
     margin-left: 20px !important;
     width: 4.8rem;
+    height: 25px;
     border: solid 1px #cecece;
     border-radius: 4px;
 }

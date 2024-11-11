@@ -300,15 +300,17 @@ function Inicio() {
     const [dataIni, setDataIni] = useState('');
     const [dataFin, setDataFin] = useState('');
     const [status, setStatus] = useState("todos");
-
+    const [dataIniF, setDataIniF] = useState('');
+    const [dataFinF, setDataFinF] = useState('');
     const handleStatusChange = (event) => {
         setStatus(event.target.value);
     };
     const formatarDataIni = () => {
-        const date = moment(dataIni, 'YYYY-MM-DD', true);
+        const dataIni = moment(dataIni, 'YYYY-MM-DD', true);
+        const dataFin = moment(dataFin, 'YYYY-MM-DD', true);
         console.log('Data formatada:', date);
-        if (date.isValid()) {            
-            const formatted = date.format('DD-MM-YYYY');
+        if (dataIni.isValid()) {            
+            setDataIniF(dataIni.format('DD-MM-YYYY'));
             setDataIni(formatted);
             console.log('Data formatada:', formatted);
           } else {
