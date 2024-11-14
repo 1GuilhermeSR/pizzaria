@@ -2,16 +2,13 @@ import NavegationBar from "./layout/NavegationBar";
 import Pedidos from "./Pedidos";
 import styles from './styles/inicio.module.css'
 import React from 'react'
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
-import { useState } from 'react';
-import { format } from 'date-fns';
+import { useState, useEffect } from 'react';
 import moment from 'moment';
 function Inicio() {
     const pedidos = [
         {
             numeroPedido: 139,
-            dataPedido: "29/08/2024 20:24",
+            dataPedido: "29/08/2024",
             produtos: [
                 {
                     nome: "Pizza marguerita",
@@ -40,7 +37,7 @@ function Inicio() {
         },
         {
             numeroPedido: 140,
-            dataPedido: "30/08/2024 18:45",
+            dataPedido: "30/08/2024",
             produtos: [
                 {
                     nome: "Pizza quatro queijos",
@@ -63,7 +60,7 @@ function Inicio() {
         },
         {
             numeroPedido: 141,
-            dataPedido: "01/09/2024 12:15",
+            dataPedido: "01/09/2024",
             produtos: [
                 {
                     nome: "Pizza pepperoni",
@@ -93,7 +90,7 @@ function Inicio() {
         },
         {
             numeroPedido: 142,
-            dataPedido: "02/09/2024 21:30",
+            dataPedido: "02/09/2024",
             produtos: [
                 {
                     nome: "Pizza frango com catupiry",
@@ -122,7 +119,7 @@ function Inicio() {
         },
         {
             numeroPedido: 143,
-            dataPedido: "03/09/2024 19:05",
+            dataPedido: "03/09/2024",
             produtos: [
                 {
                     nome: "Pizza portuguesa",
@@ -152,7 +149,7 @@ function Inicio() {
         // Novos objetos anteriores
         {
             numeroPedido: 144,
-            dataPedido: "05/09/2024 14:20",
+            dataPedido: "05/09/2024",
             produtos: [
                 {
                     nome: "Pizza vegetariana",
@@ -181,7 +178,7 @@ function Inicio() {
         },
         {
             numeroPedido: 145,
-            dataPedido: "06/09/2024 11:45",
+            dataPedido: "06/09/2024",
             produtos: [
                 {
                     nome: "Pizza de chocolate",
@@ -211,7 +208,7 @@ function Inicio() {
         // Novos objetos adicionados agora
         {
             numeroPedido: 146,
-            dataPedido: "07/09/2024 13:15",
+            dataPedido: "07/09/2024",
             produtos: [
                 {
                     nome: "Pizza bacon",
@@ -240,7 +237,7 @@ function Inicio() {
         },
         {
             numeroPedido: 147,
-            dataPedido: "08/09/2024 17:30",
+            dataPedido: "08/09/2024",
             produtos: [
                 {
                     nome: "Pizza napolitana",
@@ -269,7 +266,7 @@ function Inicio() {
         },
         {
             numeroPedido: 148,
-            dataPedido: "09/09/2024 18:00",
+            dataPedido: "09/09/2024",
             produtos: [
                 {
                     nome: "Pizza de presunto",
@@ -297,28 +294,33 @@ function Inicio() {
             observacao: "Cerveja bem gelada."
         }
     ];
-    const [dataIni, setDataIni] = useState('');
-    const [dataFin, setDataFin] = useState('');
+    
     const [status, setStatus] = useState("todos");
-    const [dataIniF, setDataIniF] = useState('');
-    const [dataFinF, setDataFinF] = useState('');
+    const [dataIniF, setDataIniF] = useState("");
+    const [dataFinF, setDataFinF] = useState("");
     const handleStatusChange = (event) => {
         setStatus(event.target.value);
     };
-    const formatarDataIni = () => {
-        const dataIni = moment(dataIni, 'YYYY-MM-DD', true);
-        const dataFin = moment(dataFin, 'YYYY-MM-DD', true);
-        console.log('Data formatada:', date);
+
+    var dataIni;
+    var dataFin;
+
+    const formatarDataIni = (e) => {
+        e.preventDefault()
+        dataIni = moment(e.target.value, 'YYYY-MM-DD', true);        
         if (dataIni.isValid()) {            
-            setDataIniF(dataIni.format('DD-MM-YYYY'));
-            setDataIni(formatted);
-            console.log('Data formatada:', formatted);
-          } else {
-            console.log('Data inválida: ' + date);
-          }
+            setDataIniF(dataIni.format('DD/MM/YYYY'));            
+        }
+        else if(dataIniF != ""){setDataIniF("")}
     } 
-    const formatarDataFin = () => {
-        const date = moment(dataIni, 'DD/MM/YYYY', true);
+
+    const formatarDataFin = (e) => {
+        e.preventDefault()
+        dataFin = moment(e.target.value, 'YYYY-MM-DD', true);
+        if (dataFin.isValid()) {            
+            setDataFinF(dataFin.format('DD/MM/YYYY'));
+        }
+        else if (dataFinF != ""){setDataFinF("")}
     } 
 
     return (
@@ -341,12 +343,12 @@ function Inicio() {
                                         <input
                                             type="text"
                                             className={styles.uiInput}
-                                            onChange={(e) => setDataIni(e.target.value)}
+                                            onChange={formatarDataIni}
                                             placeholder="" // Remove o placeholder                                                                                   
                                             onFocus={(e) => e.target.type = 'date'}  // Muda para 'date' ao focar
                                             onBlur={(e) => {
                                                 if (!e.target.value) e.target.type = 'text'; // Volta para 'text' se o campo estiver vazio
-                                                formatarDataIni()
+                                                //formatarDataIni(e);
                                             }}
                                         />
                                     </div>
@@ -355,16 +357,15 @@ function Inicio() {
                                         <input
                                             type="text"
                                             className={styles.uiInput}
-                                            onChange={(e) => setDataFin(e.target.value)}
+                                            onChange={formatarDataFin}
                                             placeholder="" // Remove o placeholder                                                                                   
                                             onFocus={(e) => e.target.type = 'date'}  // Muda para 'date' ao focar
                                             onBlur={(e) => {
                                                 if (!e.target.value) e.target.type = 'text'; // Volta para 'text' se o campo estiver vazio
-                                                formatarDataFin()
+                                                //formatarDataFin(e)
                                             }}
                                         />
-                                    </div>
-                                    <button id={styles.btnFiltrar}>Filtrar</button>
+                                    </div>                                    
                                 </div>
                                 <div className={styles.status}>
                                     <p id={styles}>Status do pedido: </p>
@@ -417,7 +418,7 @@ function Inicio() {
                             </div>
                         </div>
                         <div id={styles.divisor}></div>
-                        <Pedidos listaPedidos={pedidos} status={status} dataIni={dataIni} dataFin={dataFin}></Pedidos>
+                        <Pedidos listaPedidos={pedidos} status={status} dataIni={dataIniF} dataFin={dataFinF}></Pedidos>
                     </div>
 
 
