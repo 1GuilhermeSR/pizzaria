@@ -119,7 +119,7 @@ function CadContainer(){
                         <td>{produto.categoria}</td>
                         <td>{produto.subcategoria}</td>
                         <td>{produto.tamanho}</td>
-                        <td>{produto.preco}</td>
+                        <td>{ "R$" + produto.preco}</td>
                         <td>
                         <FaRegEdit 
                             className={styles.iconEdit}

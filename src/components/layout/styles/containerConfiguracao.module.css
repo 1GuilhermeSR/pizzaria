@@ -1,0 +1,133 @@
+
+.container{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(0, 0, 0, 0.1), 4px 0 8px rgba(0, 0, 0, 0.1), -4px 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    height: 80vh;
+    margin-top: 20px;
+    padding-top: 8px;
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-bottom: 8px;    
+}
+.topo{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.spanDetalhes{
+    display: flex;
+    flex-direction: column;    
+    opacity: 0.6;
+    margin-left: 16px;
+}
+.containerDetalhes{
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.containerDetalhes svg{
+    font-size: 3em;
+    opacity: 0.5;
+}
+.btnSair{
+    color: white;
+    background-color: #901919;
+    border-radius: 8px;
+    border-style: none;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 6rem;
+    margin-left: auto !important;
+}
+.btnSair:hover{
+    cursor: pointer;
+    background-color: #831616;
+    transform: translateY(-2px);
+}
+.divisor{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 18px; 
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #dadada
+}
+.Containersubtitulo{
+    width: 100%;
+    text-align: center;
+    margin-top: 0px !important;
+}
+.Containersubtitulo h2{
+    margin-top: 0px !important;
+}
+
+.containerInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.containerInputs input{
+    /* background-color: #f0f0f0; */
+    opacity: 1;
+    color: rgba(0, 0, 0, 0.637);
+}
+
+.containerNome{
+    display: flex;
+    flex-direction: column;
+}
+.containerEmail{
+    display: flex;
+    flex-direction: column;
+}
+.containerSenha{
+    display: flex;
+    flex-direction: column;
+}
+
+.containerButtons{
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+} 
+
+.btnGravar{
+    margin-right: 8px !important;    
+    border-radius: 8px;
+    border-style: solid;
+    background-color: white;
+    border-color: #46464652;
+    color: #464646;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 6rem;
+}
+.btnEditar{
+    margin-left: 8px !important;
+    border-radius: 8px;
+    border-style: solid ;
+    background-color: white;
+    border-color: #46464652;
+    color: #464646;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 6rem;
+}
+.btnGravar:hover{
+    cursor: pointer;
+}
+.btnEditar:hover{
+    cursor: pointer;
+    background-color: rgb(247, 247, 247);
+}

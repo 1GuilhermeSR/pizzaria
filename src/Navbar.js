@@ -4,6 +4,7 @@ import Login from './components/Login';
 import Inicio from './components/Inicio';
 import Produto from './components/Produto';
 import Categorias from './components/Categorias';
+import Subcategorias from './components/Subcategorias';
 import Cupons from './components/Cupons';
 import Configuracao from './components/Configuracao';
 
@@ -23,6 +24,7 @@ function Navbar(){
                     </ProtectedPages>
                 }/>
                 <Route path="/categoria" element={<ProtectedPages><Categorias/></ProtectedPages>}/>
+                <Route path="/subcategoria" element={<ProtectedPages><Subcategorias/></ProtectedPages>}/>
                 <Route path="/cupom" element={<ProtectedPages><Cupons/></ProtectedPages>}/>
                 <Route path="/configuracao" element={<ProtectedPages><Configuracao/></ProtectedPages>}/>
             </Routes>

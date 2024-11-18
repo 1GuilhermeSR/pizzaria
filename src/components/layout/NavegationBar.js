@@ -6,6 +6,7 @@ import { useState, useEffect} from 'react';
 import { FaHouse, FaBoxArchive,  } from "react-icons/fa6";
 import { BiCategory, BiSolidCategory, BiBox, BiSolidBox, BiCog, BiSolidCog  } from "react-icons/bi";
 import { BsTicketPerforated, BsTicketPerforatedFill} from "react-icons/bs";
+import { MdOutlineCategory,MdCategory } from "react-icons/md"
 import { LiaCogSolid } from "react-icons/lia";
 import { PiHouseLineBold,PiHouseLineFill  } from "react-icons/pi";
 
@@ -31,6 +32,10 @@ function NavegationBar(){
         setAtual('categoria')
         navigate('/categoria')
     }
+    function irSubcategoria(){
+        setAtual('subcategoria')
+        navigate('/subcategoria')
+    }
     function irCupom(){
         setAtual('cupom')
         navigate('/cupom')
@@ -52,6 +57,7 @@ function NavegationBar(){
                    <button className={classNames(styles.btn, {[styles.ativo]: atual == 'inicio' })} onClick={irInicio}>{atual === 'inicio' ? <PiHouseLineFill /> : <PiHouseLineBold />}Inicio</button>
                    <button className={classNames(styles.btn, {[styles.ativo]: atual == 'produto' })} onClick={irProduto}>{atual == 'produto' ? <BiSolidBox/> : <BiBox/>} Produtos</button>
                    <button className={classNames(styles.btn, {[styles.ativo]: atual == 'categoria' })} onClick={irCategoria}>{atual == 'categoria' ? <BiSolidCategory/> : <BiCategory/>} Categorias</button>
+                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'subcategoria' })} onClick={irSubcategoria}>{atual == 'subcategoria' ? <MdCategory/> : <MdOutlineCategory/>} Subcategorias</button>
                    <button className={classNames(styles.btn, {[styles.ativo]: atual == 'cupom' })} onClick={irCupom}>{atual == 'cupom' ? <BsTicketPerforatedFill/> : <BsTicketPerforated/>} Cupons</button>
                    <button className={classNames(styles.btn, {[styles.ativo]: atual == 'configuracao' })} onClick={irConfiguracao}>{atual == 'configuracao' ? <BiSolidCog/> : <BiCog/>}Configurações</button>
                 </div>

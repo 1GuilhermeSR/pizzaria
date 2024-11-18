@@ -25,9 +25,9 @@
 
 .botoes{
     display: flex;
-    width:61%;
+    width:70%;
     margin-bottom: 8px;
-    margin-right: 4vw;
+    margin-right: 2vw;
 }
 
 .btn{
