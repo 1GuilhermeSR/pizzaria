@@ -2,6 +2,7 @@ import styles from './styles/cadContainerCategoria.module.css'
 import { BiBox, BiSolidBox} from "react-icons/bi";
 import { FaListUl,FaRegEdit } from "react-icons/fa";
 import {CiTrash } from "react-icons/ci";
+import { useLocation, useNavigate } from 'react-router-dom';
 function CadContainerCategoria(){
     const categorias = [
         {
@@ -13,6 +14,9 @@ function CadContainerCategoria(){
             nome: "Bebida"
         }
     ];
+    const navigate = useNavigate()
+    const location = useLocation();
+    
     function removerCategoria(){
         
     }
@@ -32,7 +36,8 @@ function CadContainerCategoria(){
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>NOME</th>                        
+                        <th>NOME</th>   
+                        <th>AÇÕES</th>                       
                     </tr>
                 </thead>
                 <tbody>

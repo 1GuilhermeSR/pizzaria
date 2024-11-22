@@ -10,5 +10,128 @@
       "title": "another title",
       "views": 200
     }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "Pizza Margherita",
+      "categoria": "pizza",
+      "subcategoria": "tradicional",
+      "preco": 25,
+      "tamanho": "media",
+      "ativo": true
+    },
+    {
+      "id": "2",
+      "nome": "Pizza Pepperoni",
+      "categoria": "pizza",
+      "subcategoria": "gourmet",
+      "preco": 30,
+      "tamanho": "grande",
+      "ativo": true
+    },
+    {
+      "id": "3",
+      "nome": "Refrigerante Coca-Cola",
+      "categoria": "bebida",
+      "subcategoria": "refrigerante",
+      "preco": 5,
+      "tamanho": "350ml",
+      "ativo": true
+    },
+    {
+      "id": "4",
+      "nome": "Refrigerante Fanta",
+      "categoria": "bebida",
+      "tamanho": "600ml",
+      "preco": 5,
+      "ativo": true
+    },
+    {
+      "id": "5",
+      "nome": "Cerveja Heineken",
+      "categoria": "bebida",
+      "subcategoria": "cerveja",
+      "preco": 8,
+      "tamanho": "600ml",
+      "ativo": true
+    },
+    {
+      "id": "6",
+      "nome": "Pizza Quatro Queijos",
+      "categoria": "pizza",
+      "subcategoria": "gourmet",
+      "preco": 28,
+      "tamanho": "pequena",
+      "ativo": true
+    },
+    {
+      "id": "7",
+      "nome": "Suco de Laranja",
+      "categoria": "bebida",
+      "subcategoria": "suco",
+      "preco": 6,
+      "tamanho": "1L",
+      "ativo": true
+    },
+    {
+      "id": "8",
+      "nome": "Pizza Portuguesa",
+      "categoria": "pizza",
+      "subcategoria": "tradicional",
+      "preco": 27,
+      "tamanho": "media",
+      "ativo": true
+    },
+    {
+      "id": "9",
+      "nome": "Água Mineral",
+      "categoria": "bebida",
+      "subcategoria": "agua",
+      "preco": 3,
+      "tamanho": "600ml",
+      "ativo": true
+    },
+    {
+      "id": "10",
+      "nome": "Pizza Calabresa",
+      "categoria": "pizza",
+      "subcategoria": "tradicional",
+      "preco": 26,
+      "tamanho": "grande",
+      "ativo": true
+    },
+    {
+      "id": "0e20",
+      "nome": "nome",
+      "categoria": "pizza",
+      "tamanho": "tamanho",
+      "preco": "preço",
+      "ativo": false
+    },
+    {
+      "id": "99",
+      "nome": "produto teste",
+      "categoria": "pizza",
+      "tamanho": "tamanho teste",
+      "preco": "123",
+      "ativo": false
+    },
+    {
+      "nome": "nome teste 2",
+      "categoria": "pizza",
+      "tamanho": "tamanho 2",
+      "preco": "123",
+      "ativo": true,
+      "id": "4106"
+    },
+    {
+      "id": "e959",
+      "nome": "nome teste 3",
+      "categoria": "pizza",
+      "tamanho": "tamanho 3",
+      "preco": "123",
+      "ativo": true
+    }
   ]
 }

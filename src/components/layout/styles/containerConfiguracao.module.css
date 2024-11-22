@@ -100,34 +100,45 @@
     margin-top: 12px;
 } 
 
-.btnGravar{
+#btnGravar{
     margin-right: 8px !important;    
     border-radius: 8px;
     border-style: solid;
     background-color: white;
-    border-color: #46464652;
+    border-color: #4646462c;;
     color: #464646;
     justify-content: center;
     align-items: center;
     height: 2rem;
     width: 6rem;
 }
-.btnEditar{
+#btnEditar{
     margin-left: 8px !important;
     border-radius: 8px;
     border-style: solid ;
     background-color: white;
-    border-color: #46464652;
+    border-color: #4646462c;
     color: #464646;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
     height: 2rem;
     width: 6rem;
 }
-.btnGravar:hover{
-    cursor: pointer;
-}
-.btnEditar:hover{
+#btnGravar:hover{
     cursor: pointer;
     background-color: rgb(247, 247, 247);
+}
+#btnEditar:hover{
+    cursor: pointer;
+    background-color: rgb(247, 247, 247);
+}
+
+.btnDesabilitado{ 
+    background-color: rgb(247, 247, 247) !important;
+    border-color: rgb(235, 235, 235) !important;
+}
+
+.inputDesabilitado{
+    background-color: rgb(247, 247, 247) !important;
+    border-color: rgb(235, 235, 235) !important;
 }

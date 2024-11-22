@@ -2,6 +2,7 @@ import styles from './styles/cadContainerCategoria.module.css'
 import { BiBox, BiSolidBox} from "react-icons/bi";
 import { FaListUl,FaRegEdit } from "react-icons/fa";
 import {CiTrash } from "react-icons/ci";
+import { useLocation, useNavigate } from 'react-router-dom';
 function CadContainerCupom(){
 
     const cupons = [
@@ -36,8 +37,15 @@ function CadContainerCupom(){
             dataExpiracao: "2025-01-01"
         }
     ];
+    const navigate = useNavigate()
+    const location = useLocation();
+
     function removerCupom(){
         
+    }
+
+    function irCadastro(){
+
     }
     
     return(
@@ -47,7 +55,7 @@ function CadContainerCupom(){
                 <div className={styles.divisor}></div>
             </div>
            <div className={styles.topo}>
-                <button>Novo</button>
+                <button onClick={irCadastro}>Novo</button>
                 <input type="text" name="" id="" placeholder="Pesquisar" />
            </div>
            <div className={styles.containerTabela}>
@@ -57,7 +65,8 @@ function CadContainerCupom(){
                         <th>ID</th>
                         <th>NOME</th> 
                         <th>DESCONTO</th> 
-                        <th>DATA EXPIRAÇÂO</th>                           
+                        <th>DATA EXPIRAÇÂO</th>
+                        <th>AÇÕES</th>                             
                     </tr>
                 </thead>
                 <tbody>

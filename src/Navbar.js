@@ -7,12 +7,12 @@ import Categorias from './components/Categorias';
 import Subcategorias from './components/Subcategorias';
 import Cupons from './components/Cupons';
 import Configuracao from './components/Configuracao';
-
+import CadastroProduto from './components/layout/CadastroProduto';
 function Navbar(){
     return(
         <Router>
             <Routes>
-                <Route path="*" element={<Login/>}/>
+                <Route path="/*" element={<Login/>}/>
                 <Route path="/inicio" element={
                     <ProtectedPages>
                         <Inicio/>
@@ -27,6 +27,7 @@ function Navbar(){
                 <Route path="/subcategoria" element={<ProtectedPages><Subcategorias/></ProtectedPages>}/>
                 <Route path="/cupom" element={<ProtectedPages><Cupons/></ProtectedPages>}/>
                 <Route path="/configuracao" element={<ProtectedPages><Configuracao/></ProtectedPages>}/>
+                <Route path="/cadastroProduto" element={<ProtectedPages><CadastroProduto/></ProtectedPages>}/>
             </Routes>
         </Router>
     )

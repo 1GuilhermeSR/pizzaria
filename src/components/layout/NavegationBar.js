@@ -45,6 +45,10 @@ function NavegationBar(){
         navigate('/configuracao')
     }
 
+    function irCadastroProduto(){
+        navigate('/cadastroProduto')
+    }
+
 
     return(
         <div className={styles.main}>
