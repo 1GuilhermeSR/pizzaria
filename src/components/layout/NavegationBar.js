@@ -61,7 +61,7 @@ function NavegationBar(){
                    <button className={classNames(styles.btn, {[styles.ativo]: atual == 'inicio' })} onClick={irInicio}>{atual === 'inicio' ? <PiHouseLineFill /> : <PiHouseLineBold />}Inicio</button>
                    <button className={classNames(styles.btn, {[styles.ativo]: atual == 'produto' })} onClick={irProduto}>{atual == 'produto' ? <BiSolidBox/> : <BiBox/>} Produtos</button>
                    <button className={classNames(styles.btn, {[styles.ativo]: atual == 'categoria' })} onClick={irCategoria}>{atual == 'categoria' ? <BiSolidCategory/> : <BiCategory/>} Categorias</button>
-                   <button className={classNames(styles.btn, {[styles.ativo]: atual == 'subcategoria' })} onClick={irSubcategoria}>{atual == 'subcategoria' ? <MdCategory/> : <MdOutlineCategory/>} Subcategorias</button>
+                   {/* <button className={classNames(styles.btn, {[styles.ativo]: atual == 'subcategoria' })} onClick={irSubcategoria}>{atual == 'subcategoria' ? <MdCategory/> : <MdOutlineCategory/>} Subcategorias</button> */}
                    <button className={classNames(styles.btn, {[styles.ativo]: atual == 'cupom' })} onClick={irCupom}>{atual == 'cupom' ? <BsTicketPerforatedFill/> : <BsTicketPerforated/>} Cupons</button>
                    <button className={classNames(styles.btn, {[styles.ativo]: atual == 'configuracao' })} onClick={irConfiguracao}>{atual == 'configuracao' ? <BiSolidCog/> : <BiCog/>}Configurações</button>
                 </div>

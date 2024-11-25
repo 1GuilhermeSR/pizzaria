@@ -13,13 +13,12 @@
   ],
   "produtos": [
     {
-      "id": "1",
-      "nome": "Pizza Margherita",
+      "nome": "Pizza Marguerita",
       "categoria": "pizza",
-      "subcategoria": "tradicional",
-      "preco": 25,
       "tamanho": "media",
-      "ativo": true
+      "preco": 25,
+      "ativo": true,
+      "id": "1"
     },
     {
       "id": "2",
@@ -132,6 +131,74 @@
       "tamanho": "tamanho 3",
       "preco": "123",
       "ativo": true
+    }
+  ],
+  "categorias": [
+    {
+      "nome": "Pizza",
+      "ativo": true,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nome": "Bebida"
+    },
+    {
+      "id": "b62c",
+      "nome": "teste",
+      "ativo": false
+    },
+    {
+      "id": "1077",
+      "nome": "teste",
+      "ativo": false
+    }
+  ],
+  "cupons": [
+    {
+      "nome": "DescontoVerão",
+      "desconto": 10,
+      "dataExpiracao": "2024-12-31",
+      "ativo": true,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nome": "FreteGratis",
+      "desconto": 15,
+      "dataExpiracao": "2025-01-15"
+    },
+    {
+      "id": "3",
+      "nome": "BlackFriday",
+      "desconto": 50,
+      "dataExpiracao": "2024-11-30"
+    },
+    {
+      "id": "4",
+      "nome": "NatalSurpresa",
+      "desconto": 25,
+      "dataExpiracao": "2024-12-25"
+    },
+    {
+      "id": "5",
+      "nome": "AnoNovoEconômico",
+      "desconto": 30,
+      "dataExpiracao": "2025-01-01"
+    },
+    {
+      "id": "3ab5",
+      "nome": "teste",
+      "desconto": "teste",
+      "dataExpiracao": "teste",
+      "ativo": false
+    },
+    {
+      "id": "9341",
+      "nome": "teste",
+      "desconto": "teste",
+      "dataExpiracao": "teste",
+      "ativo": false
     }
   ]
 }

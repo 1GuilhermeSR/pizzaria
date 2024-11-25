@@ -112,7 +112,7 @@ function CadContainer() {
          try{
              var response = await axios.get(url, {
                 params: {
-                  ativo: true, // Filtro para buscar produtos onde ativo = true
+                  ativo: true, 
                 },
               });
              setProdutos(response.data);  
