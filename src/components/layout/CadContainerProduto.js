@@ -102,7 +102,7 @@ function CadContainer() {
         preco: '',
         ativo: true        
     })
-    const url = "http://localhost:3001/produtos";
+    const url = "http://localhost:3001/produtos/";
 
     useEffect(() => {
         buscarProdutos();
@@ -125,7 +125,7 @@ function CadContainer() {
         debugger
         if(validarForm()){
             if(idProduto == ''){
-                var response = await axios.post("http://localhost:3001/produtos/", produtoCad)
+                var response = await axios.post(url, produtoCad)
                 if (response.status == 201 ){
                     alert("Produto cadastro com sucesso")
                     buscarProdutos()
@@ -137,7 +137,7 @@ function CadContainer() {
                 }
             }
             else{
-                var response = await axios.put("http://localhost:3001/produtos/" + idProduto, produtoCad)
+                var response = await axios.put(url + idProduto, produtoCad)
                 if (response.status == 200 ){
                     alert("Produto editado com sucesso")                    
                     fecharModal()
@@ -152,7 +152,7 @@ function CadContainer() {
     } 
     async function removerProduto(produtoR) {        
         produtoR.ativo = false;
-        var response = await axios.put("http://localhost:3001/produtos/" + produtoR.id, produtoR)
+        var response = await axios.put(url + produtoR.id, produtoR)
         if (response.status == 200 ){
             alert("Produto excluido com sucesso")
             buscarProdutos()

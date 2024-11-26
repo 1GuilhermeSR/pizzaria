@@ -2,13 +2,21 @@
   "usuarios": [
     {
       "id": "1",
+      "nome": "Guilherme Saldanha",
       "email": "1guilhermesr1@gmail.com",
       "senha": "senhafoda"
     },
     {
-      "id": "2",
-      "title": "another title",
-      "views": 200
+      "id": "f866",
+      "nome": "Nome de teste",
+      "email": "teste@teste.com",
+      "senha": "teste123"
+    },
+    {
+      "id": "0c25",
+      "nome": "asd",
+      "email": "asd",
+      "senha": "asd"
     }
   ],
   "produtos": [
