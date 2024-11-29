@@ -1,5 +1,4 @@
 import styles from './styles/cadContainerCupom.module.css'
-import { BiBox, BiSolidBox} from "react-icons/bi";
 import { FaListUl,FaRegEdit } from "react-icons/fa";
 import {CiTrash } from "react-icons/ci";
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -13,7 +12,7 @@ function CadContainerCupom(){
     const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [idCupom, setIdCupom] = useState("");
-    const [cupons, setCupons] = useState([""]);
+    const [cupons, setCupons] = useState([]);
     const [cupomCad, setCupomCad] = useState({
         nome : '',
         desconto: '',

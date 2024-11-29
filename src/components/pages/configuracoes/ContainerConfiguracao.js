@@ -1,5 +1,5 @@
 import styles from './styles/containerConfiguracao.module.css'
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaRegUser } from "react-icons/fa"
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';

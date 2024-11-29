@@ -1,6 +1,6 @@
-import NavegationBar from "./layout/NavegationBar";
+import NavegationBar from "../../layout/NavegationBar";
 import styles from './styles/cupom.module.css'
-import CadContainerCupom from "./layout/CadContainerCupom";
+import CadContainerCupom from "./CadContainerCupom";
 function Cupons(){
     return(
         <>

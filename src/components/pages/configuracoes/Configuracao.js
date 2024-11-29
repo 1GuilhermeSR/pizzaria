@@ -1,6 +1,6 @@
-import NavegationBar from "./layout/NavegationBar";
+import NavegationBar from "../../layout/NavegationBar";
 import styles from './styles/configuracao.module.css'
-import ContainerConfiguracao from "./layout/ContainerConfiguracao";
+import ContainerConfiguracao from "./ContainerConfiguracao";
 function Configuracao(){
     return(
         <>

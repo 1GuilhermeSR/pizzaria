@@ -35,6 +35,9 @@
 }
 
 .topo input{
+    border-radius: 6px;
+    border: 0.135em solid rgb(202, 202, 202);
+    width: 12rem;
     height: 2.1rem;  
     margin-bottom: 0px;
     padding-left: 10px;

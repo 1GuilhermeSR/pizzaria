@@ -1,17 +1,14 @@
 import styles from './styles/login.module.css'
 import { FcGoogle } from "react-icons/fc";
-import logo from './img/Logo.png'
+import logo from '../../img/Logo.png'
 import axios from 'axios';
 import { useState } from 'react';
-import UserService from '../UserService';
+import UserService from '../../../UserService';
 import { useNavigate } from 'react-router-dom';
 import { IoIosArrowBack } from "react-icons/io";
 
-import Cadastro from './Cadastro';
-
 function Login() {
     const [email, setEmail] = useState("")
-    const [nome, setNome] = useState("")
     const [senha, setSenha] = useState("")
     const [isCadastro, setIsCadastro] = useState(false)
     const [cadastro, setCadastro] = useState({

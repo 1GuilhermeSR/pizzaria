@@ -125,11 +125,11 @@
       "ativo": false
     },
     {
-      "nome": "nome teste 2",
+      "nome": "aaaa",
       "categoria": "pizza",
       "tamanho": "tamanho 2",
       "preco": "123",
-      "ativo": true,
+      "ativo": false,
       "id": "4106"
     },
     {
@@ -138,7 +138,7 @@
       "categoria": "pizza",
       "tamanho": "tamanho 3",
       "preco": "123",
-      "ativo": true
+      "ativo": false
     }
   ],
   "categorias": [
@@ -207,6 +207,303 @@
       "desconto": "teste",
       "dataExpiracao": "teste",
       "ativo": false
+    }
+  ],
+  "pedidos": [
+    {
+      "numeroPedido": 139,
+      "dataPedido": "29/08/2024",
+      "produtos": [
+        {
+          "nome": "Pizza marguerita",
+          "tamanho": "Pequena (4 fatias)",
+          "preco": 54.99,
+          "tipo": 1
+        },
+        {
+          "nome": "Pizza calabresa",
+          "tamanho": "Média (6 fatias)",
+          "preco": 65.99,
+          "tipo": 1
+        }
+      ],
+      "enderecoEntrega": {
+        "rua": "Rua dos Sonhos, 123",
+        "bairro": "Bairro Imaginário",
+        "cidade": "Cidade dos Contos",
+        "estado": "SP",
+        "cep": "12345-678"
+      },
+      "formaPagamento": "Cartão com final 3456",
+      "total": 120.98,
+      "status": 1,
+      "observacao": "Sem cebola.",
+      "id": "5532"
+    },
+    {
+      "id": "3891",
+      "numeroPedido": 140,
+      "dataPedido": "30/08/2024",
+      "produtos": [
+        {
+          "nome": "Pizza quatro queijos",
+          "tamanho": "Grande (8 fatias)",
+          "preco": 75.5,
+          "tipo": 1
+        }
+      ],
+      "formaPagamento": "Cartão com final 1234",
+      "enderecoEntrega": {
+        "rua": "Avenida das Estrelas, 456",
+        "bairro": "Bairro Celestial",
+        "cidade": "Cidade das Nuvens",
+        "estado": "RJ",
+        "cep": "98765-432"
+      },
+      "total": 75.5,
+      "observacao": "Sem borda recheada.",
+      "status": 4
+    },
+    {
+      "numeroPedido": 141,
+      "dataPedido": "01/09/2024",
+      "produtos": [
+        {
+          "nome": "Pizza pepperoni",
+          "tamanho": "Média (6 fatias)",
+          "preco": 59.9,
+          "tipo": 1
+        },
+        {
+          "nome": "Coca-Cola",
+          "tamanho": "2 Litros",
+          "preco": 10,
+          "tipo": 2
+        }
+      ],
+      "enderecoEntrega": {
+        "rua": "Rua do Sol",
+        "numero": 789,
+        "bairro": "Centro",
+        "cidade": "Cidade do Horizonte",
+        "estado": "MG",
+        "cep": "65432-109"
+      },
+      "formaPagamento": "Dinheiro (troco para R$100)",
+      "total": 69.9,
+      "status": 0,
+      "observacao": "Troco para R$100, por favor.",
+      "id": "5041"
+    },
+    {
+      "numeroPedido": 142,
+      "dataPedido": "02/09/2024",
+      "produtos": [
+        {
+          "nome": "Pizza frango com catupiry",
+          "tamanho": "Pequena (4 fatias)",
+          "preco": 50,
+          "tipo": 1
+        },
+        {
+          "nome": "Suco de laranja",
+          "tamanho": "1 Litro",
+          "preco": 8,
+          "tipo": 2
+        }
+      ],
+      "enderecoEntrega": {
+        "rua": "Travessa Lua, 321",
+        "bairro": "Vila Estelar",
+        "cidade": "Cidade do Cometa",
+        "estado": "ES",
+        "cep": "32109-876"
+      },
+      "formaPagamento": "Pix",
+      "total": 58,
+      "status": 0,
+      "observacao": "",
+      "id": "5440"
+    },
+    {
+      "numeroPedido": 143,
+      "dataPedido": "03/09/2024",
+      "produtos": [
+        {
+          "nome": "Pizza portuguesa",
+          "tamanho": "Grande (8 fatias)",
+          "preco": 70,
+          "tipo": 1
+        },
+        {
+          "nome": "Guaraná",
+          "tamanho": "1,5 Litros",
+          "preco": 9.5,
+          "tipo": 2
+        }
+      ],
+      "enderecoEntrega": {
+        "rua": "Rua Estrela do Mar, 654",
+        "bairro": "Bairro Oceânico",
+        "cidade": "Cidade da Praia",
+        "estado": "BA",
+        "cep": "87654-321"
+      },
+      "formaPagamento": "Cartão com final 6789",
+      "total": 79.5,
+      "status": 1,
+      "observacao": "Com azeitona.",
+      "id": "0bf0"
+    },
+    {
+      "numeroPedido": 144,
+      "dataPedido": "05/09/2024",
+      "produtos": [
+        {
+          "nome": "Pizza vegetariana",
+          "tamanho": "Média (6 fatias)",
+          "preco": 60,
+          "tipo": 1
+        },
+        {
+          "nome": "Água mineral",
+          "tamanho": "500ml",
+          "preco": 3.5,
+          "tipo": 2
+        }
+      ],
+      "enderecoEntrega": {
+        "rua": "Alameda das Flores, 789",
+        "bairro": "Jardim Alegre",
+        "cidade": "Cidade da Alegria",
+        "estado": "SP",
+        "cep": "12340-987"
+      },
+      "formaPagamento": "Cartão com final 4321",
+      "total": 63.5,
+      "status": 1,
+      "observacao": "Pouca salada na pizza, por favor.",
+      "id": "120a"
+    },
+    {
+      "id": "a131",
+      "numeroPedido": 145,
+      "dataPedido": "06/09/2024",
+      "produtos": [
+        {
+          "nome": "Pizza de chocolate",
+          "tamanho": "Pequena (4 fatias)",
+          "preco": 45,
+          "tipo": 1
+        },
+        {
+          "nome": "Suco de uva",
+          "tamanho": "1 Litro",
+          "preco": 7,
+          "tipo": 2
+        }
+      ],
+      "formaPagamento": "Dinheiro (troco para R$50)",
+      "enderecoEntrega": {
+        "rua": "Rua dos Doces, 321",
+        "bairro": "Bairro Açucarado",
+        "cidade": "Cidade dos Sabores",
+        "estado": "RJ",
+        "cep": "98765-321"
+      },
+      "total": 52,
+      "observacao": "Troco para R$50.",
+      "status": 3
+    },
+    {
+      "id": "4695",
+      "numeroPedido": 146,
+      "dataPedido": "07/09/2024",
+      "produtos": [
+        {
+          "nome": "Pizza bacon",
+          "tamanho": "Grande (8 fatias)",
+          "preco": 72,
+          "tipo": 1
+        },
+        {
+          "nome": "Refrigerante Sprite",
+          "tamanho": "1,5 Litros",
+          "preco": 9,
+          "tipo": 2
+        }
+      ],
+      "formaPagamento": "Cartão com final 9876",
+      "enderecoEntrega": {
+        "rua": "Avenida Central, 345",
+        "bairro": "Bairro Novo",
+        "cidade": "Cidade do Sol",
+        "estado": "PE",
+        "cep": "54321-987"
+      },
+      "total": 81,
+      "observacao": "Com bacon extra.",
+      "status": 2
+    },
+    {
+      "numeroPedido": 147,
+      "dataPedido": "08/09/2024",
+      "produtos": [
+        {
+          "nome": "Pizza napolitana",
+          "tamanho": "Média (6 fatias)",
+          "preco": 62,
+          "tipo": 1
+        },
+        {
+          "nome": "Chá gelado",
+          "tamanho": "1 Litro",
+          "preco": 6.5,
+          "tipo": 2
+        }
+      ],
+      "enderecoEntrega": {
+        "rua": "Rua das Palmeiras, 123",
+        "bairro": "Vila Verde",
+        "cidade": "Cidade das Árvores",
+        "estado": "SC",
+        "cep": "12345-987"
+      },
+      "formaPagamento": "Pix",
+      "total": 68.5,
+      "status": 0,
+      "observacao": "",
+      "id": "ddf2"
+    },
+    {
+      "numeroPedido": 148,
+      "dataPedido": "09/09/2024",
+      "produtos": [
+        {
+          "nome": "Pizza de presunto",
+          "tamanho": "Grande (8 fatias)",
+          "preco": 68,
+          "tipo": 1
+        },
+        {
+          "nome": "Cerveja",
+          "tamanho": "600ml",
+          "preco": 12,
+          "tipo": 2
+        }
+      ],
+      "enderecoEntrega": {
+        "rua": "Travessa das Brisas, 987",
+        "bairro": "Praia Azul",
+        "cidade": "Cidade da Lagoa",
+        "estado": "BA",
+        "cep": "65432-109"
+      },
+      "formaPagamento": "Dinheiro (troco para R$100)",
+      "total": 80,
+      "status": 0,
+      "observacao": "Troco para R$100.",
+      "id": "98d3"
     }
   ]
 }

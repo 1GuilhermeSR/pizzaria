@@ -1,5 +1,4 @@
 import styles from './styles/cadContainer.module.css'
-import { BiBox, BiSolidBox } from "react-icons/bi";
 import { FaListUl, FaRegEdit } from "react-icons/fa";
 import { CiTrash } from "react-icons/ci";
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -8,93 +7,9 @@ import { IoMdClose } from "react-icons/io";
 import axios from 'axios';
 
 function CadContainer() {
-    // const produtos = [
-    //     {
-    //         id: 1,
-    //         nome: "Pizza Margherita",
-    //         categoria: "pizza",
-    //         subcategoria: "tradicional",
-    //         preco: 25.00,
-    //         tamanho: "media"
-    //     },
-    //     {
-    //         id: 2,
-    //         nome: "Pizza Pepperoni",
-    //         categoria: "pizza",
-    //         subcategoria: "gourmet",
-    //         preco: 30.00,
-    //         tamanho: "grande"
-    //     },
-    //     {
-    //         id: 3,
-    //         nome: "Refrigerante Coca-Cola",
-    //         categoria: "bebida",
-    //         subcategoria: "refrigerante",
-    //         preco: 5.00,
-    //         tamanho: "350ml"
-    //     },
-    //     {
-    //         id: 4,
-    //         nome: "Refrigerante Fanta",
-    //         categoria: "bebida",
-    //         subcategoria: "refrigerante",
-    //         preco: 5.00,
-    //         tamanho: "600ml"
-    //     },
-    //     {
-    //         id: 5,
-    //         nome: "Cerveja Heineken",
-    //         categoria: "bebida",
-    //         subcategoria: "cerveja",
-    //         preco: 8.00,
-    //         tamanho: "600ml"
-    //     },
-    //     {
-    //         id: 6,
-    //         nome: "Pizza Quatro Queijos",
-    //         categoria: "pizza",
-    //         subcategoria: "gourmet",
-    //         preco: 28.00,
-    //         tamanho: "pequena"
-    //     },
-    //     {
-    //         id: 7,
-    //         nome: "Suco de Laranja",
-    //         categoria: "bebida",
-    //         subcategoria: "suco",
-    //         preco: 6.00,
-    //         tamanho: "1L"
-    //     },
-    //     {
-    //         id: 8,
-    //         nome: "Pizza Portuguesa",
-    //         categoria: "pizza",
-    //         subcategoria: "tradicional",
-    //         preco: 27.00,
-    //         tamanho: "media"
-    //     },
-    //     {
-    //         id: 9,
-    //         nome: "Água Mineral",
-    //         categoria: "bebida",
-    //         subcategoria: "agua",
-    //         preco: 3.00,
-    //         tamanho: "600ml"
-    //     },
-    //     {
-    //         id: 10,
-    //         nome: "Pizza Calabresa",
-    //         categoria: "pizza",
-    //         subcategoria: "tradicional",
-    //         preco: 26.00,
-    //         tamanho: "grande"
-    //     }
-    // ];
-    const navigate = useNavigate()
-    const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [idProduto, setIdProduto] = useState("");
-    const [produtos, setProdutos] = useState([""]);
+    const [produtos, setProdutos] = useState([]);
     const [produtoCad, setProdutoCad] = useState({
         nome : '',
         categoria: '',
@@ -121,8 +36,7 @@ function CadContainer() {
          }
      } 
 
-    async function cadastrarProduto(){
-        debugger
+    async function cadastrarProduto(){  
         if(validarForm()){
             if(idProduto == ''){
                 var response = await axios.post(url, produtoCad)

@@ -22,6 +22,10 @@ li{
     width: 100% !important;
     break-inside: avoid;
 }
+li:hover{
+    cursor: pointer;
+    transform: translateY(-8px);    
+}
 ul{
     width: 100%;
     column-count: 2;
@@ -56,6 +60,9 @@ ul{
     padding-top: 8px;
     padding-bottom: 8px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.pedidoPendente:hover{
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1); 
 }
 .titulo{
     margin-bottom: 0px;
@@ -217,4 +224,124 @@ border-radius: 6px;
 }
 .pagamentoIcon{
     color: #186f18a1;
+}
+
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -4px 8px rgba(0, 0, 0, 0.1), 4px 0 8px rgba(0, 0, 0, 0.1), -4px 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    position: fixed; /* Para posicionamento relativo à janela do navegador */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+    background-color: white;
+    width: 46%;
+    height: 48vh;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.modalOverlay {
+    position: fixed; /* Cobre toda a tela */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.274); /* Fundo escuro com opacidade */
+    z-index: 999; /* Coloca atrás do modal, mas na frente do restante da página */
+}
+.modalTitulo{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-bottom: 16px;
+}
+.modalTitulo h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.modalTitulo button{    
+    display: flex;    
+    background-color: #e0e0e0;
+    color: rgb(0, 0, 0);
+    border-style: none;
+    border-radius: 10px;
+    width: 1.8rem;
+    height: 1.8rem;
+    align-items: center;
+    justify-content: center;
+}
+.modalTitulo button:hover{
+    background-color: #d6d6d6;
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+.pedidoSelecionado{
+    width: 96%;    
+    height: fit-content;
+    margin-bottom: 15px;
+    /* margin-left: 12px; */    
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+   
+}
+
+.containerBtnModal{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnAtualizarStatus{
+    width: 8em !important;
+    height: 2.2rem; 
+    font-size: 1rem !important;  
+    border-radius: 8px;
+    border-style: none;
+    color: white;
+    background-color: #901919;
+    margin-left: auto !important;
+    margin-right: auto !important;
+   
+}
+.btnAtualizarStatus:hover{
+    cursor: pointer;
+    background-color: #831616;
+    transform: translateY(-2px);
+}
+.btnCancelarPedido{
+    width: 8.5em !important;
+    height: 2.2rem; 
+    font-size: 1rem !important;  
+    border-radius: 8px;
+    border-style: none;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: 0.12em solid rgb(202, 202, 202);
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.btnCancelarPedido:hover{
+    cursor: pointer;
+    background-color: #f8f8f8;
+    transform: translateY(-2px);
+}
+.teste{
+    display: flex;        
+    border-style: none;
+    border-radius: 10px;
+    width: 1.8rem;
+    height: 1.8rem;
+    align-items: center;
+    justify-content: center;
 }

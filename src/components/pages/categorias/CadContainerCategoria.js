@@ -1,27 +1,13 @@
 import styles from './styles/cadContainerCategoria.module.css'
-import { BiBox, BiSolidBox} from "react-icons/bi";
 import { FaListUl,FaRegEdit } from "react-icons/fa";
 import {CiTrash } from "react-icons/ci";
-import { useLocation, useNavigate } from 'react-router-dom';
 import { useState , useEffect} from 'react';
 import axios from 'axios';
 import { IoMdClose } from "react-icons/io";
 function CadContainerCategoria(){
-    // const categorias = [
-    //     {
-    //         id: 1,
-    //         nome: "Pizza"            
-    //     },
-    //     {
-    //         id: 2,
-    //         nome: "Bebida"
-    //     }
-    // ];
-    const navigate = useNavigate()
-    const location = useLocation();
     const [isOpen, setIsOpen] = useState(false);
     const [idCategoria, setIdCategoria] = useState("");
-    const [categorias, setCategorias] = useState([""]);
+    const [categorias, setCategorias] = useState([]);
     const [categoriaCad, setCategoriaCad] = useState({
         nome : '',       
         ativo: true        

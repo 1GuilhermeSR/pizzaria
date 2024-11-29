@@ -1,6 +1,6 @@
-import NavegationBar from "./layout/NavegationBar";
+import NavegationBar from "../../layout/NavegationBar";
 import styles from './styles/categoria.module.css'
-import CadContainerCategoria from "./layout/CadContainerCategoria";
+import CadContainerCategoria from "./CadContainerCategoria";
 function Categorias(){
     return(
         <>

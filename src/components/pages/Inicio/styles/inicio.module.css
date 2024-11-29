@@ -104,7 +104,7 @@ p{
 }
 .status{
     display: flex;
- width: 60%;
+ width: 76%;
  align-items: center;
 
 }
@@ -126,6 +126,7 @@ p{
     width: 1.2em;
     margin-bottom: 0px;
 }
+
 
 .chkStatus:hover{
     cursor: pointer;

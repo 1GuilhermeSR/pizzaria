@@ -1,6 +1,6 @@
-import NavegationBar from "./layout/NavegationBar";
+import NavegationBar from "../../layout/NavegationBar";
 import styles from './styles/produto.module.css'
-import CadContainer from "./layout/CadContainerProduto";
+import CadContainer from "./CadContainerProduto";
 function Produto(){
     return(
         <>

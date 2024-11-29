@@ -77,6 +77,10 @@
 }
 .containerInputs input{
     /* background-color: #f0f0f0; */
+    border-radius: 6px;
+    border: 0.135em solid rgb(202, 202, 202);
+    width: 12rem;
+    height: 1.4rem;
     opacity: 1;
     color: rgba(0, 0, 0, 0.637);
 }
